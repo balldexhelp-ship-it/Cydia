@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cydia</title>
+    <!-- iOS-specific meta for home screen name, icon, full-screen launch -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Cydia">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://i.postimg.cc/FH9mM2XW/IMG-0920.jpg">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://i.postimg.cc/FH9mM2XW/IMG-0920.jpg">
+    <!-- Embedded manifest as data URL so everything is in one file -->
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiQ3lkaWEiLCJzaG9ydF9uYW1lIjoiQ3lkaWEiLCJpY29ucyI6W3sic3JjIjoiaHR0cHM6Ly9pLnBvc3RpbWcuY2MvRkg5bU0yWFcvSU1HLTA5MjAuanBnIiwic2l6ZXMiOiIxOTJ4MTkyIiwidHlwZSI6ImltYWdlL3BuZyJ9LHsic3JjIjoiaHR0cHM6Ly9pLnBvc3RpbWcuY2MvRkg5bU0yWFcvSU1HLTA5MjAuanBnIiwic2l6ZXMiOiI1MTJ4NTEyIiwidHlwZSI6ImltYWdlL3BuZyJ9XSwidGhlbWVfY29sb3IiOiIjZmZmZmZmIiwiYmFja2dyb3VuZF9jb2xvciI6IiNmZmZmZmYiLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsInN0YXJ0X3VybCI6Ii8ifQ==">
+    <style>
+        body { margin:0; padding:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:#f8f8f8; color:#000; overflow-x:hidden; }
+        header { display:flex; align-items:center; padding:10px; background:#fff; border-bottom:1px solid #ccc; }
+        header img { width:40px; height:40px; margin-right:10px; }
+        header h1 { font-size:24px; margin:0; }
+        .tweaks-list { padding:10px; }
+        .tweak { background:#fff; border:1px solid #ddd; border-radius:8px; padding:10px; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center; }
+        .tweak-info { flex:1; }
+        .tweak h2 { font-size:18px; margin:0 0 5px; }
+        .tweak p { font-size:14px; margin:0; color:#666; }
+        .install-btn { background:#007aff; color:#fff; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; }
+        .modal { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); display:flex; justify-content:center; align-items:center; z-index:1000; }
+        .modal-content { background:#fff; padding:20px; border-radius:10px; text-align:center; max-width:80%; }
+        .modal button { background:#007aff; color:#fff; border:none; padding:10px 20px; border-radius:5px; margin-top:10px; cursor:pointer; }
+    </style>
+</head>
+<body>
+    <div id="popup" class="modal">
+        <div class="modal-content">
+            <p>This works best if you add the site to your home screen as a web app!</p>
+            <button onclick="document.getElementById('popup').style.display='none'">Continue</button>
+        </div>
+    </div>
+
+    <header>
+        <img src="https://i.postimg.cc/FH9mM2XW/IMG-0920.jpg" alt="Cydia Icon">
+        <h1>Welcome</h1>
+    </header>
+
+    <section class="tweaks-list">
+        <div class="tweak">
+            <div class="tweak-info"><h2>Activator</h2><p>Customize gestures and actions for buttons, shortcuts, and more across your device.</p></div>
+            <button class="install-btn" onclick="alert('Fake install complete!')">Get</button>
+        </div>
+        <div class="tweak">
+            <div class="tweak-info"><h2>Springtomize</h2><p>Ultimate customization for your home screen, icons, animations, and status bar.</p></div>
+            <button class="install-btn" onclick="alert('Fake install complete!')">Get</button>
+        </div>
+        <div class="tweak">
+            <div class="tweak-info"><h2>Barrel</h2><p>Add fun 3D effects and animations when swiping between home screen pages.</p></div>
+            <button class="install-btn" onclick="alert('Fake install complete!')">Get</button>
+        </div>
+        <!-- Add the rest of the tweaks the same way if you want more -->
+    </section>
+
+    <script>
+        window.onload = () => { document.getElementById('popup').style.display = 'flex'; };
+    </script>
+</body>
+</html>
